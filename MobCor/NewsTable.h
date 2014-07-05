@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface NewsTable : UITableViewController
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *Sort;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *Plus;
+@property (weak, nonatomic) IBOutlet UIButton *ButtonAdd;
 @end
