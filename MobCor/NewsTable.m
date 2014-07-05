@@ -15,6 +15,7 @@
     NSMutableArray *text;
     NSMutableArray *date;
     NSDate *currentDate;
+    NSDateFormatter *dateFormatter;
 }
 
 @end
@@ -44,6 +45,11 @@
     [text addObject:@"test"];
     currentDate = [NSDate date];
     [date addObject: currentDate];
+    dateFormatter=  [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd MMM yyyy HH:mm"];
+    
+    
+    
 
 }
 
@@ -132,7 +138,7 @@
     an.text = [text objectAtIndex:index.row];
     NSLocale *loc;
     loc = [NSLocale autoupdatingCurrentLocale];
-    an.dateText = [[date objectAtIndex:index.row ]  descriptionWithLocale:loc];
+    an.dateText = [dateFormatter stringFromDate:[NSDate date]];
 }
 
 
