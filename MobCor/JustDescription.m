@@ -28,7 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.TextDescription.text = _text;
-
+    self.DateDescription.text = _dateText;
 }
 
 - (void)didReceiveMemoryWarning

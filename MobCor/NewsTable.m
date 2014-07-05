@@ -39,7 +39,11 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    text = [[NSMutableArray alloc]init];
+    date = [[NSMutableArray alloc]init];
     [text addObject:@"test"];
+    currentDate = [NSDate date];
+    [date addObject: currentDate];
 
 }
 
@@ -126,6 +130,9 @@
     an = [segue destinationViewController];
     NSIndexPath *index = [self.tableView indexPathForSelectedRow];
     an.text = [text objectAtIndex:index.row];
+    NSLocale *loc;
+    loc = [NSLocale autoupdatingCurrentLocale];
+    an.dateText = [[date objectAtIndex:index.row ]  descriptionWithLocale:loc];
 }
 
 

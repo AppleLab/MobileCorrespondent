@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface JustDescription : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *DateDescription;
 @property (weak, nonatomic) IBOutlet UITextView *TextDescription;
 @property (weak, nonatomic) IBOutlet UILabel *AuthorDescription;
 @property (weak, nonatomic) IBOutlet UIImageView *ImageDescription;
 @property NSString *text;
+@property NSString *dateText;
 @end
